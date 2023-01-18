@@ -5,8 +5,7 @@ using namespace std;
 
 typedef long long ll;
 
-int main()
-{
+void menu() {
     splash();
 
     cout << "Masukkan input 4 kartu yang dipisahkan dengan spasi/enter : " << endl;
@@ -14,30 +13,26 @@ int main()
     cout << "Input : " << endl;
     string input[4];
     cin >> input[0] >> input[1] >> input[2] >> input[3];
-    float execution_time = clock();
+
     int output[4];
     cardToInt(input, output);
 
     // cout << output[0] << " " << output[1] << " " << output[2] << " " << output[3] << endl;
 
     vector<int> card(4);
+
     for (int i = 0; i < 4; i++)
     {
         card[i] = output[i];
     }
-
+    float execution_time = clock();
     do
     {
-        // cout << "card = ";
-        // for (int i = 0; i < 4; i++)
-        // {
-        //     cout << card[i] << " ";
-        // }
-        // cout << endl;
         bfFirst(card);
     } while (next_permutation(card.begin(), card.end()));
 
     execution_time = clock() - execution_time;
+
     // Output jawaban
     cout << endl << "Output : " << endl;
 
@@ -66,4 +61,9 @@ int main()
     {
         cout << "-";
     }
+}
+
+int main()
+{
+    menu();
 }
