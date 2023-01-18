@@ -11,6 +11,55 @@ void clearScreen() {
     cout << "\033[2J" << "\033[H";
 }
 
+// Fungsi mengekspor jawaban ke file
+void exportAnswer() {
+    ofstream file;
+    file.open("../test/jawaban.txt");
+    if (cnt == 0) {
+        file << "No Solution!" << endl;
+    } else {
+        file << cnt << " solution found!" << endl;
+        for (int i = 0; i < jawaban.size(); i++) {
+            file << jawaban[i] << endl;
+        }
+    }
+    file.close();
+    cout << endl;
+    cout << "----------------------------------------" << endl;
+    cout << "| Jawaban diexport ke file jawaban.txt |" << endl;
+    cout << "----------------------------------------" << endl;
+}
+
+// Fungsi memilih kartu random
+void randomInput(string input[])
+{
+    for (int i = 0; i < 4; i++)
+    {
+        int random = rand() % 13 + 1;
+        if (random == 1)
+        {
+            input[i] = "A";
+        }
+        else if (random == 11)
+        {
+            input[i] = "J";
+        }
+        else if (random == 12)
+        {
+            input[i] = "Q";
+        }
+        else if (random == 13)
+        {
+            input[i] = "K";
+        }
+        else
+        {
+            input[i] = to_string(random);
+        }
+    }
+
+}
+
 // Fungsi cek apakah bilangan bisa dibagi
 bool isDivisible(int a, int b)
 {
@@ -43,8 +92,19 @@ void cardToInt(string input[4], int output[4])
             output[i] = 13;
         }
         else
+        // Cek apakah input bukan merupakan angka
+        if (input[i][0] >= '2' && input[i][0] <= '9' && input[i][1] == '\0')
         {
             output[i] = stoi(input[i]);
+        }
+        else
+        if (input[i][0] == '1' && input[i][1] == '0')
+        {
+            output[i] = 10;
+        }
+        else
+        {
+            output[i] = -1;
         }
     }
 }

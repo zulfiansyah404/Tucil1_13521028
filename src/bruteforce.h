@@ -12,7 +12,8 @@ void bfSecond_1(vector<bil> card, string s)
 
     for (int i = 0; i < 4; i++)
     {
-        if (i == 3) {
+        if (i == 3)
+        {
             if (isDivisible(card[0].pembilang, card[1].pembilang) == false)
             {
                 break;
@@ -36,10 +37,11 @@ void bfSecond_1(vector<bil> card, string s)
                 }
             }
 
-            tempCard[0] = operasi(op[j], tempCard[0] , card[2]);
+            tempCard[0] = operasi(op[j], tempCard[0], card[2]);
 
             tempS = tempS + op[j] + to_string(card[2].pembilang);
-            cekValid(tempCard[0].pembilang/tempCard[0].penyebut, tempS);
+            if (tempCard[0].pembilang % tempCard[0].penyebut == 0)
+                cekValid(tempCard[0].pembilang / tempCard[0].penyebut, tempS);
 
             // Kembalikan string dan tempCard ke semula
             tempS = "(" + s + op[i] + to_string(card[1].pembilang) + ")";
@@ -84,13 +86,14 @@ void bfSecond_2(vector<bil> card, string s)
                 {
                     break;
                 }
-                
             }
 
             tempCard[0] = operasi(op[j], tempCard[0], card[2]);
 
             tempS = tempS + op[j] + s;
-            cekValid(tempCard[0].pembilang/tempCard[0].penyebut, tempS);
+            if (tempCard[0].pembilang % tempCard[0].penyebut == 0)
+                cekValid(tempCard[0].pembilang / tempCard[0].penyebut, tempS);
+            // cekValid(tempCard[0].pembilang / tempCard[0].penyebut, tempS);
 
             // Kembalikan string dan tempCard ke semula
             tempS = "(" + to_string(card[0].pembilang) + op[i] + to_string(card[1].pembilang) + ")";
@@ -134,12 +137,12 @@ void bfThird_1(vector<bil> card, string s)
                 {
                     break;
                 }
-                
             }
-            tempCard[0] = operasi(op[j], tempCard[0] ,card[2]);
+            tempCard[0] = operasi(op[j], tempCard[0], card[2]);
 
             tempS = tempS + op[j] + to_string(card[2].pembilang);
-            cekValid(tempCard[0].pembilang/tempCard[0].penyebut, tempS);
+            if (tempCard[0].pembilang % tempCard[0].penyebut == 0)
+                cekValid(tempCard[0].pembilang / tempCard[0].penyebut, tempS);
 
             // Kembalikan string dan tempCard ke semula
             tempS = "(" + to_string(card[0].pembilang) + op[i] + s + ")";
@@ -189,7 +192,8 @@ void bfThird_2(vector<bil> card, string s)
             tempCard[0] = operasi(op[j], card[0], tempCard[1]);
 
             tempS = to_string(card[0].pembilang) + op[j] + tempS;
-            cekValid(tempCard[0].pembilang/tempCard[0].penyebut, tempS);
+            if (tempCard[0].pembilang % tempCard[0].penyebut == 0)
+                cekValid(tempCard[0].pembilang / tempCard[0].penyebut, tempS);
 
             // Kembalikan string dan tempCard ke semula
             tempS = "(" + s + op[i] + to_string(card[2].pembilang) + ")";
@@ -218,7 +222,8 @@ void bfSecond_3(vector<bil> card, string s)
 void bfFirst(vector<int> c)
 {
     vector<bil> card(4);
-    for (int i = 0; i < 4; i++) {
+    for (int i = 0; i < 4; i++)
+    {
         card[i].pembilang = c[i];
         card[i].penyebut = 1;
     }
@@ -232,7 +237,8 @@ void bfFirst(vector<int> c)
 
         for (int k = 0; k < 4; k++)
         {
-            if (op[k] == '/') {
+            if (op[k] == '/')
+            {
                 if (isDivisible(card[i].pembilang, card[j].pembilang) == false)
                 {
                     break;
