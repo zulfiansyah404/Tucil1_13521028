@@ -6,6 +6,7 @@ using namespace std;
 typedef long long ll;
 
 void menu() {
+    clearScreen();
     splash();
 
     cout << "Masukkan input 4 kartu yang dipisahkan dengan spasi/enter : " << endl;

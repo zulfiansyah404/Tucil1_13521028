@@ -7,6 +7,10 @@ vector<string> jawaban;
 
 char op[4] = {'+', '-', '*', '/'};
 
+void clearScreen() {
+    cout << "\033[2J" << "\033[H";
+}
+
 // Fungsi cek apakah bilangan bisa dibagi
 bool isDivisible(int a, int b)
 {
