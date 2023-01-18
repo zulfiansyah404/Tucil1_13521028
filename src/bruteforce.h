@@ -1,9 +1,9 @@
-// Prosedur ketika kartu pertama dan kedua sudah dioperasikan
 #include "fitur.h"
 
 #ifndef _BRUTEFORCE_H_
 #define _BRUTEFORCE_H_
 
+// Prosedur ketika kartu pertama dan kedua sudah dioperasikan
 void bfSecond_1(vector<bil> card, string s)
 {
     // Buat string dan vector sementara
@@ -78,8 +78,6 @@ void bfSecond_2(vector<bil> card, string s)
 
         for (int j = 0; j < 4; j++)
         {
-            // cout << "\t\t\toperator = " << op[j] << endl;
-            // cout << "\t\t\tcard[2] = " << card[2] << endl;
             if (j == 3)
             {
                 if (isDivisible(tempCard[0].pembilang, card[2].pembilang) == false)
