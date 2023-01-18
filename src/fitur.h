@@ -1,23 +1,22 @@
 #ifndef _FITUR_H
 #define _FITUR_H
-#include <bits/stdc++.h>
+#include "bilangan.h"
 
 int cnt = 0;
 vector<string> jawaban;
 
 char op[4] = {'+', '-', '*', '/'};
 
+void clearScreen() {
+    cout << "\033[2J" << "\033[H";
+}
+
 // Fungsi cek apakah bilangan bisa dibagi
 bool isDivisible(int a, int b)
 {
     if (b != 0)
     {
-        // cout << "\t\t\tb tidak 0" << endl;
-        if (a % b == 0)
-        {
-            // cout << "\t\t\ta habis dibagi b" << endl;
-            return true;
-        }
+        return true;
     }
     return false;
 }
