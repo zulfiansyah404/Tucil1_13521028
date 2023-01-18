@@ -7,6 +7,8 @@ typedef long long ll;
 int cnt = 0;
 vector<string> jawaban;
 
+// Tes
+
 char op[4] = {'+', '-', '*', '/'};
 
 // Fungsi cek apakah bilangan bisa dibagi
