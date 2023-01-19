@@ -12,9 +12,9 @@ void clearScreen() {
 }
 
 // Fungsi mengekspor jawaban ke file
-void exportAnswer() {
+void exportAnswer(string input[]) {
     ofstream file;
-    file.open("../test/jawaban.txt");
+    file.open("../test/answer_" + input[0] + "_" + input[1] + "_" + input[2] + "_" + input[3] + "_" + ".txt");
     if (cnt == 0) {
         file << "No Solution!" << endl;
     } else {

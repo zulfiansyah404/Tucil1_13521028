@@ -8,6 +8,7 @@ typedef long long ll;
 void Input(string pesan_kesalahan)
 {   
     int output[100];
+    string input[1000];
     while (true)
     {
         clearScreen();
@@ -22,7 +23,7 @@ void Input(string pesan_kesalahan)
         string inputWithSpace;
         getline(cin, inputWithSpace);
 
-        string input[1000];
+        
         int j = 0;
         int len = inputWithSpace.length();
         for (int i = 0; i < len; i++)
@@ -101,6 +102,15 @@ void Input(string pesan_kesalahan)
     {
         cout << "-";
     }
+
+    // Cek apakah output ingin dieksport ke file
+
+    cout << "\n\nApakah anda ingin mengeksport output ke file? (tekan y untuk YA) : ";
+    string inp;
+    cin >> inp;
+    if (inp == "y") {
+        exportAnswer(input);
+    }
 }
 
 void randomInput() {
@@ -167,6 +177,15 @@ void randomInput() {
         cout << "-";
     }
 
+    // Cek apakah output ingin dieksport ke file
+
+    cout << "\n\nApakah anda ingin mengeksport output ke file? (tekan y untuk YA) : ";
+    string inp;
+    cin >> inp;
+    if (inp == "y") {
+        exportAnswer(input);
+    }
+
 }
 
 void chooseInput(string pesan_kesalahan) {
@@ -211,15 +230,6 @@ void chooseInput(string pesan_kesalahan) {
 }
 int main() {
     chooseInput("");
-
-    // Cek apakah output ingin dieksport ke file
-
-    cout << "\n\nApakah anda ingin mengeksport output ke file? (tekan y untuk YA) : ";
-    string input;
-    cin >> input;
-    if (input == "y") {
-        exportAnswer();
-    }
 
 
 }
