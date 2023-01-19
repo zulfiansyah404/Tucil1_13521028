@@ -16,6 +16,8 @@ Program untuk mencari semua kemungkinan operasi dari empat bilangan untuk mengha
 ```bash
 .
 │   README.md
+├───.vscode
+│       Tucil1_K3_13521028_Muhammad Zulfiansyah Bayu Pratama.pdf
 │
 ├───doc
 │       Tucil1_K3_13521028_Muhammad Zulfiansyah Bayu Pratama.pdf
@@ -28,7 +30,12 @@ Program untuk mencari semua kemungkinan operasi dari empat bilangan untuk mengha
 │       splash.h
 │
 └───test
-        jawaban.txt
+        answer_2_4_6_8_.txt
+        answer_3_8_4_7_.txt
+        answer_10_J_Q_K_.txt
+        answer_A_2_3_4_.txt
+        answer_A_2_6_7_.txt
+        answer_A_8_9_Q_.txt
 ```
 
 ## Requirement Program
