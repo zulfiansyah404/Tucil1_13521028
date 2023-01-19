@@ -10,14 +10,18 @@ Disusun untuk memenuhi Tugas Kecil 1 IF2211 Strategi Algoritma "Penyelesaian *Pe
 * [Author](#author)
 
 ## Deskripsi Singkat Program
-Program untuk mencari semua kemungkinan operasi dari empat bilangan untuk menghasilkan nilai 24. Terdapat dua opsi input pada program, yaitu input manual dan input random. Untuk input manual, program akan meminta empat input string. Input harus salah satu dari {'A', '2', '3', ..., 'J', 'Q', 'K'}. Jika input tidak sesuai maka program akan meminta ulang input. Lalu program akan mencari semua kemungkinan jawaban yang mungkin. Di akhir program akan diminta apakah user ingin menyimpan jawaban atau tidak.
-
+Program untuk mencari semua kemungkinan operasi dari empat bilangan untuk menghasilkan nilai 24. Terdapat dua opsi input pada program, yaitu input manual dan input random. Untuk input manual, program akan meminta empat input string.
 ## Struktur Program
 ```bash
 .
 │   README.md
 ├───.vscode
-│       Tucil1_K3_13521028_Muhammad Zulfiansyah Bayu Pratama.pdf
+│       c_cpp_properties.json
+│       settings.json
+│       tasks.json
+│
+├───bin
+│       main.exe
 │
 ├───doc
 │       Tucil1_K3_13521028_Muhammad Zulfiansyah Bayu Pratama.pdf
@@ -39,21 +43,21 @@ Program untuk mencari semua kemungkinan operasi dari empat bilangan untuk mengha
 ```
 
 ## Requirement Program
-* Java Virtual Machine versi 11 atau lebih baru.
+* C/C++ Compiler (Minimal MINGW G++ 12.1.0)
 
 ## Cara Kompilasi Program
-1. Pastikan Java Virtual Machine versi 11 atau lebih baru sudah terpasang pada mesin eksekusi (Anda dapat mengecek versi Java Virtual Machine dengan menjalan command `java -version` pada command prompt).
-2. Jalankan command `./extract` atau `./extract.bat` pada command prompt jika Anda menggunakan Windows dan jalankan command `./extract.sh` pada command prompt jika Anda menggunakan Linux atau macOS.
+1. Pastikan C/C++ Compiler sudah terpasang pada mesin eksekusi (Anda dapat mengecek versi C/C++ Compiler dengan menjalan command `g++ --version` pada command prompt).
+2. Kompilasi program pada "src/main.cpp" dengan menggunakan tombol kompilasi pada masing-masing code editor atau dengan menjalankan command `g++ src\main.cpp -o bin\main.exe` (Usahakan memakai tombol 'Run' pada VS Code agar Splashscreen terlihat lebih jelas)
 3. Jika berhasil dikompilasi, maka akan terdapat folder `bin` pada directory program.
 
 ## Cara Menjalankan Program
 1. Pastikan Anda telah berhasil melakukan kompilasi pada program.
-2. Tambahkan file teks dalam format `.txt` yang berisi matriks huruf di dalam *puzzle* (antarhuruf dipisahkan oleh spasi), diikuti satu baris kosong, dan daftar kata-kata yang akan dicari di dalam *puzzle* ke dalam folder `test` pada directory program.
-3. Jalankan command `./run` atau `./run.bat` pada command prompt jika Anda menggunakan Windows dan jalankan command `./run.sh` pada command prompt jika Anda menggunakan Linux atau macOS.
-4. Masukkan nama file teks yang sudah ditambahkan sebelumnya ke dalam input program.
+2. Saat program berhasil dijalankan, anda akan diminta apakah program menerim input manual dari user atau dipilih secara random oleh program. Ikuti instruksi dari program. 
+3. Jika anda memilih input manual, maka anda akan diminta memasukkan 4 buah string dari salah satu {'A', '2', '3', ..., 'J', 'Q', 'K'}. Jika tidak sesuai maka program akan meminta ulang input.
+4. Setelah program berhasil menemukan solusi, user akan diminta input apakah user ingin menyimpan hasil solusi dalam bentuk file txt. Tekan `y` untuk mengeksport output program.
 
 ## Author
-* Nama: Rayhan Kinan Muhannad
-* NIM: 13520065
+* Nama: Muhammad Zulfiansyah Bayu Pratama
+* NIM: 13521028
 * Prodi/Jurusan: STEI/Teknik Informatika
-* Profile Github: [rayhankinan](https://github.com/rayhankinan)
+* Profile Github: [zulfiansyah404](https://github.com/zulfiansyah404)
